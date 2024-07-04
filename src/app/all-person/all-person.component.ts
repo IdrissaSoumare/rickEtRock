@@ -8,19 +8,21 @@ import { RickService } from 'src/rick.service';
 })
 export class AllPersonComponent {
 
-  character: any;
+  character: any | undefined = [];
   canDraw = false;
 
   constructor(private rickService: RickService) { }
 
   ngOnInit(): void {
-    this.checkCooldown();
+    // this.checkCooldown();
+    this.getRandomCharacters();
   }
 
-  getRandomCharacter(): void {
+  getRandomCharacters(): void {
     this.rickService.getRandomCharacter().subscribe(data => {
       this.character = data;
-      this.setCooldown();
+      console.log(data);
+
     });
   }
 

@@ -1,8 +1,8 @@
-<div *ngIf="character">
-  <img [src]="character.image" alt="{{ character.name }}">
-  <h2>{{ character.name }}</h2>
-  <p>Status: {{ character.status }}</p>
-  <p>Species: {{ character.species }}</p>
-  <p>Character ID: {{ character.id }}</p>
+<div *ngFor="let characters of character">
+  <!-- <img [src]="character.results.image" alt="{{ character.name }}"> -->
+  <h2>{{ characters.location.name }}</h2>
+  <p>Status: {{ characters.origin.status }}</p>
+  <p>Species: {{ characters.origin.species }}</p>
+  <p>Character ID: {{ characters.episode.id }}</p>
 </div>
-<button (click)="getRandomCharacter()" [disabled]="!canDraw">Draw Character</button>
+<!-- <button (click)="getRandomCharacters()" [disabled]="!canDraw">Draw Character</button> -->

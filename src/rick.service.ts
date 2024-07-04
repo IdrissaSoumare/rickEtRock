@@ -16,8 +16,8 @@ export class RickService {
     return this.http.get(`${this.apiUrl}/character/${randomId}`);
   }
 
-  getCharacterById(id: number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/character/${id}`);
-  }
+  // getCharacterById(id: number): Observable<any> {
+  //   return this.http.get(`${this.apiUrl}/character/${id}`);
+  // }
 
 }
